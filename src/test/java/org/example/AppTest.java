@@ -17,15 +17,15 @@ public class AppTest {
 
     @Test
     public void testRecursiveMethod() {
-        assertEquals(0,calculator.calculateGeneralWay(0));
-        assertEquals(1,calculator.calculateGeneralWay(1));
-        assertEquals(1,calculator.calculateGeneralWay(2));
-        assertEquals(2,calculator.calculateGeneralWay(3));
-        assertEquals(3,calculator.calculateGeneralWay(4));
+        assertEquals(0,calculator.calculateRecursively(0));
+        assertEquals(1,calculator.calculateRecursively(1));
+        assertEquals(1,calculator.calculateRecursively(2));
+        assertEquals(2,calculator.calculateRecursively(3));
+        assertEquals(3,calculator.calculateRecursively(4));
 
-        assertEquals(5,calculator.calculateGeneralWay(5));
-        assertEquals(8,calculator.calculateGeneralWay(6));
-        assertEquals(13,calculator.calculateGeneralWay(7));
+        assertEquals(5,calculator.calculateRecursively(5));
+        assertEquals(8,calculator.calculateRecursively(6));
+        assertEquals(13,calculator.calculateRecursively(7));
     }
 
     @Test
@@ -45,5 +45,10 @@ public class AppTest {
         assertEquals(102_334_155,calculator.calculateGeneralWay(40));
         assertEquals(12_586_269_025L,calculator.calculateGeneralWay(50));
     }
-    
+
+    @Test
+    public void testWithNegativeValue() {
+        assertEquals(0,calculator.calculateGeneralWay(-500));
+        assertEquals(0,calculator.calculateRecursively(-500));
+    }
 }

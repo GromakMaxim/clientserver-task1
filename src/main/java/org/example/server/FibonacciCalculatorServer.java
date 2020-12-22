@@ -22,10 +22,10 @@ public class FibonacciCalculatorServer {
                         break;
                     }
                     try {
-                        long userInput =  Integer.parseInt(line);
+                        long userInput = Integer.parseInt(line);
                         //out.println(calculator.calculateRecursively(userInput));
                         out.println(calculator.calculateGeneralWay(userInput));
-                    } catch (NumberFormatException nfe){
+                    } catch (NumberFormatException nfe) {
                         out.println("Ошибка!");
                     }
                 }

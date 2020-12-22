@@ -3,7 +3,7 @@ package org.example.server;
 public class FCalculator {
 
     public long calculateRecursively(long userInput) {
-        if (userInput == 0) {
+        if (userInput == 0 || userInput < 0) {
             return 0;
         } else if (userInput == 1) {
             return 1;
@@ -15,7 +15,7 @@ public class FCalculator {
     public long calculateGeneralWay(long userInput) {
         long firstValue = 0;
         long secondValue = 1;
-        if (userInput == firstValue) {
+        if (userInput == firstValue || userInput < 0) {
             return 0;
         } else if (userInput == secondValue) {
             return 1;
@@ -27,6 +27,5 @@ public class FCalculator {
             }
             return secondValue;
         }
-
     }
 }
